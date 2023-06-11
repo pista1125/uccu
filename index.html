@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Random Word Generator</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Uccu Neki</h1>
+    <p id="word"></p>
+    <button class="button" onclick="generateRandomWord()">Generate</button>
+  </div>
+
+  <script>
+    const words = ['Cigány Bűnözés', 'Vándorlás', 'Kanalazik', 'Zsebtolvaj', 'Üstfoltozó', 'Zene', 'Stétberger Ferenc', 'Cigány Karaván', 'Jós', 'Gyűlölet Bűncselekmény', 'Cigánykerék', 'Tenyérből Jóslás', 'Letakarja A Tükrötvándorlás', 'Szőnyegkészítő', 'Teknővájó', 'Szekér', 'Macskajaj', 'Jósnő', 'Szoknya', 'Keresztelő', 'Lókupec', 'Fekete Malac', 'Cirkusz', 'Roma Szakkollégium', 'Szegregáció', 'Virrasztás', 'Romungró (Magyarcigány)', 'Kéretés', 'Pipa', 'Identitás', 'Lecsó', 'Kalap', 'Cigány', 'Bazi Nagy Roma Lagzi', 'Szotyi', 'Ll Junior', 'Tánc', 'Rabszolgaság', 'Cigánybűnözés', 'Cigánykerék', 'Bodak (Cigánykenyér)', 'Punya (Cigánykenyér)', 'Kirekesztés', 'Diszkirimáció', 'Fux', 'Sátor', 'Cigány Himnusz', 'Teknővájó', 'Teknő', 'Vajda', 'Száztagú Cigányzenekar', 'Kosárfonó'];
+
+    function generateRandomWord() {
+      const wordElement = document.getElementById('word');
+      const randomIndex = Math.floor(Math.random() * words.length);
+      const randomWord = words[randomIndex];
+      wordElement.textContent = randomWord;
+    }
+  </script>
+</body>
+</html>
+
